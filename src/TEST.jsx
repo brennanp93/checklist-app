@@ -1,23 +1,19 @@
 // import { testMe } from "./data";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 export default function Test({ django, express, testMe }) {
   let { checkList } = useParams();
+ 
   let expressSteps = express.steps.map((m) => m)
   let djangoSteps = django.steps.map((m) => m)
   let listSteps = checkList === 'express' ? expressSteps : djangoSteps;
-
   return (
     <>
       <h2>{checkList}</h2>
       {/* <div>{e}</div> */}
       {listSteps.map((step) => (
-        <div style={{
-          border: "solid black",
-          backgroundColor: "plum",
-          margin: '5px',
-          padding: '5px'
-        }}>
+        <div className="listStyle">
           <div >
             <h1>{step.title}</h1>
             <p>{step.description}</p>

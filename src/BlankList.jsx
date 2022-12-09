@@ -21,17 +21,22 @@ export default function BlankList() {
   function handleSubmit(evt) {
     evt.preventDefault();
     setCheckList([...checkList, newItem]);
+    setNewItem({
+      step: "",
+      website: "",
+      completed: false
+    })
   }
 
   function handleChange(evt) {
     const newItemList = {
       ...newItem,
       [evt.target.name]: evt.target.value,
-      [evt.target.name]: evt.target.value,
+      // [evt.target.name]: evt.target.value,
       completed: false
     };
     setNewItem(newItemList);
-    console.log("newItem" + newItemList);
+    // console.log("newItem" + newItemList);
   }
 
   function markComplete(idx) {

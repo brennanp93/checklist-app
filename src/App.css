@@ -20,3 +20,10 @@
   padding: 1rem;
   background-color: bisque;
 }
+
+.listStyle {
+    border: solid black 2px;
+    background-color: bisque;
+    margin: 5px;
+    padding: 5px
+}
