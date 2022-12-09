@@ -1,6 +1,8 @@
-
+import { Routes, Route, Link } from "react-router-dom";
+import { expressList, djangoList, testMe } from "./data";
 import { useState } from "react";
 import ExpressCheckList from "./ExpressCheckList";
+import Test from "./TEST";
 import DjangoCheckList from "./DjangoCheckList";
 import Header from "./Header";
 import BlankList from "./BlankList";
@@ -18,6 +20,38 @@ export default function App() {
   return (
     <div className="App">
       <Header />
+      <div>
+        <Link to="/">HOME</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/express">express</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/django">django</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/blank">Blank</Link>
+      </div>
+      <Routes>
+        <Route path="/:checkList" element={<Test django={djangoList} express={expressList} testMe={testMe}/>} />
+        <Route path="/blank" element={<BlankList django={djangoList} express={expressList} testMe={testMe}/>} />
+      </Routes>
+    </div>
+
+  );
+}
+
+
+
+
+{/* <div className="App">
+      <Header />
+      <div>
+        <Link to="/">HOME</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/express">express</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/django">django</Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/menu/tacos">TACOS</Link>
+      </div>
       <h1>Checklists</h1>
       <div className="buttonBox">
         <div> Please Select a Check List</div>
@@ -26,8 +60,4 @@ export default function App() {
         <button onClick={() => setShowList(2)}>Blank List</button>
       </div>
       {componentArray[showList]}
-    </div>
-  );
-}
-
-
+    </div> */}
