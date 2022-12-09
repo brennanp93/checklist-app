@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
-import { expressList, djangoList, testMe } from "./data";
+import { expressList, djangoList, checkLists } from "./data";
+// import { checkListSteps } from "./data";
 import { useState } from "react";
 import ExpressCheckList from "./ExpressCheckList";
 import Test from "./TEST";
@@ -34,12 +35,17 @@ export default function App() {
         </button>
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <button>
+        <Link to="/react">react</Link>
+        </button>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <button>
         <Link to="/blank">Blank</Link>
         </button>
       </div>
       <Routes>
-        <Route path="/:checkList" element={<Test django={djangoList} express={expressList} testMe={testMe}/>} />
-        <Route path="/blank" element={<BlankList django={djangoList} express={expressList} testMe={testMe}/>} />
+        {/* <Route path="/:checkList" element={<Test checkLists={checkListSteps} />} /> */}
+        <Route path="/:checkList" element={<Test django={djangoList} express={expressList} checkListSteps={checkLists}/>} />
+        <Route path="/blank" element={<BlankList />} />
       </Routes>
     </div>
 
