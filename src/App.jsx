@@ -21,13 +21,21 @@ export default function App() {
     <div className="App">
       <Header />
       <div>
+        <button>
         <Link to="/">HOME</Link>
+        </button>
         &nbsp;&nbsp;|&nbsp;&nbsp;
+        <button>
         <Link to="/express">express</Link>
+        </button>
         &nbsp;&nbsp;|&nbsp;&nbsp;
+        <button>
         <Link to="/django">django</Link>
+        </button>
         &nbsp;&nbsp;|&nbsp;&nbsp;
+        <button>
         <Link to="/blank">Blank</Link>
+        </button>
       </div>
       <Routes>
         <Route path="/:checkList" element={<Test django={djangoList} express={expressList} testMe={testMe}/>} />

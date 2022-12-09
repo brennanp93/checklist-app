@@ -13,6 +13,34 @@ export const expressList =
                 "otherStepSpecificData": "You get the point"
             },
             {
+                "title": "Title of step 1 express",
+                "description": "Longer description of necessary work at this step",
+                "terminalCommand": "optional field with command to be copy/pasted",
+                "completed": false,
+                "otherStepSpecificData": "You get the point"
+            },
+            {
+                "title": "Title of step 1 express",
+                "description": "Longer description of necessary work at this step",
+                "terminalCommand": "optional field with command to be copy/pasted",
+                "completed": false,
+                "otherStepSpecificData": "You get the point"
+            },
+            {
+                "title": "Title of step 1 express",
+                "description": "Longer description of necessary work at this step",
+                "terminalCommand": "optional field with command to be copy/pasted",
+                "completed": false,
+                "otherStepSpecificData": "You get the point"
+            },
+            {
+                "title": "Title of step 1 express",
+                "description": "Longer description of necessary work at this step",
+                "terminalCommand": "optional field with command to be copy/pasted",
+                "completed": false,
+                "otherStepSpecificData": "You get the point"
+            },
+            {
                 "title": "Title of step 2 express",
                 "description": "Longer description of necessary work at this step",
                 "terminalCommand": "optional field with command to be copy/pasted",

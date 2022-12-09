@@ -14,7 +14,9 @@ export default function Test({ django, express, testMe }) {
       {listSteps.map((step) => (
         <div style={{
           border: "solid black",
-          backgroundColor: "plum"
+          backgroundColor: "plum",
+          margin: '5px',
+          padding: '5px'
         }}>
           <div >
             <h1>{step.title}</h1>
