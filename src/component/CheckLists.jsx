@@ -18,9 +18,7 @@ export default function CheckList({ checkListSteps }) {
   function setBoolean(idx) {
     const updatedList = [...oneStep.steps];
     updatedList[idx].completed ? updatedList[idx].completed = false : updatedList[idx].completed = true;
-    // updatedList[idx].completed = true;
     setMarkComplete(updatedList);
-    console.log(updatedList)
   }
 
   /*------------*/
