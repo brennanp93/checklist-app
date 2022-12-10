@@ -3,7 +3,7 @@ import { checkLists } from "../../data";
 import Test from "../../component/CheckLists";
 import Header from "../../Header";
 import BlankList from "../../component/BlankList";
-import "./index.css";
+import "../../index.css";
 import './App.css';
 
 
