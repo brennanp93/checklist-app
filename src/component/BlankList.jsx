@@ -9,7 +9,7 @@ export default function BlankList() {
       step: "Buy Cheese",
       website: "https://cheese.com/",
       completed: false,
-      id: Math.floor(Math.random() * 100)
+      id: 1
     }
   ]);
   console.log(checkList);
