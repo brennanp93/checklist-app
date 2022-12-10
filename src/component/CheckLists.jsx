@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
 
-export default function Test({ django, express, checkListSteps }) {
+export default function CheckList({ checkListSteps }) {
   let { checkList } = useParams();
   let oneStep = checkListSteps.find((list) => list.name === checkList)
   /*------------*/
