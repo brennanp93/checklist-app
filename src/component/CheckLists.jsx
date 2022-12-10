@@ -36,6 +36,7 @@ export default function CheckList({ checkListSteps }) {
           <div >
             <h1>{step.title}</h1>
             <p>{step.description}</p>
+            <p>{step.website}</p>
             <div>
               <button onClick={() => setBoolean(idx)} type="submit">
                 {step.completed ? 'Undo 🔙' : 'Click to Mark as Complete ✅'}

@@ -39,10 +39,11 @@ export default function BlankList() {
     // console.log("newItem" + newItemList);
   }
 
-  function markComplete(idx) {
-    const newObj = [...checkList];
-    newObj[idx].completed = true;
-    setCheckList(newObj);
+
+  function setBoolean(idx) {
+    const updatedList = [...checkList];
+    updatedList[idx].completed ? updatedList[idx].completed = false : updatedList[idx].completed = true;
+    setCheckList(updatedList);
   }
 
   return (
@@ -50,16 +51,16 @@ export default function BlankList() {
       <div>
         <h1>Custom CheckList</h1>
         {checkList.map((item, idx) => (
-          <div className="blank-box">
-            <p>{item.step}</p>
+          <div className="listStyle">
+            <h1>{item.step}</h1>
             <div>
               <a href={item.website} target="_blank">
                 Additional Information
               </a>
             </div>
             <div>
-              <button onClick={() => markComplete(idx)} type="submit">
-                {item.completed ? "Nice work" : "click here when complete"}
+              <button onClick={() => setBoolean(idx)} type="submit">
+              {item.completed ? 'Undo 🔙' : 'Click to Mark as Complete ✅'}
               </button>
             </div>
           </div>
