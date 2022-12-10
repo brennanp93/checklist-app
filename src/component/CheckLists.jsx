@@ -29,12 +29,12 @@ export default function CheckList({ checkListSteps }) {
 
   return (
     <>
-      <h2>{checkList}</h2>
+      <h2>{checkList} CheckList</h2>
       {/* <div>{e}</div> */}
       {oneStep.steps.map((step, idx) => (
         <div className="listStyle">
-          <div >
-            <h1>{step.title}</h1>
+          <div style={{textDecoration: step.completed ? "line-Through" : ''}}>
+            <h1 >{step.title}</h1>
             <p>{step.description}</p>
             <p>{step.website}</p>
             <div>

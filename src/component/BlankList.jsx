@@ -8,14 +8,17 @@ export default function BlankList() {
     {
       step: "Buy Cheese",
       website: "https://cheese.com/",
-      completed: false
+      completed: false,
+      id: Math.floor(Math.random() * 100)
     }
   ]);
   console.log(checkList);
   const [newItem, setNewItem] = useState({
     step: "",
     website: "",
-    completed: false
+    completed: false,
+    id: Math.floor(Math.random() * 100)
+
   });
 
   function handleSubmit(evt) {
@@ -24,7 +27,9 @@ export default function BlankList() {
     setNewItem({
       step: "",
       website: "",
-      completed: false
+      completed: false,
+      id: Math.floor(Math.random() * 100)
+
     })
   }
 
@@ -46,12 +51,21 @@ export default function BlankList() {
     setCheckList(updatedList);
   }
 
+  function deleteItem(id) {
+    const removeItem = checkList.filter((item) => {
+      return item.id !== id;
+    });
+    setCheckList(removeItem)
+    console.log(removeItem)
+  }
+
   return (
     <>
       <div>
         <h1>Custom CheckList</h1>
         {checkList.map((item, idx) => (
-          <div className="listStyle">
+          <div className="listStyle"
+            style={{ textDecoration: item.completed ? "line-Through" : '' }}>
             <h1>{item.step}</h1>
             <div>
               <a href={item.website} target="_blank">
@@ -60,8 +74,10 @@ export default function BlankList() {
             </div>
             <div>
               <button onClick={() => setBoolean(idx)} type="submit">
-              {item.completed ? 'Undo 🔙' : 'Click to Mark as Complete ✅'}
+                {item.completed ? 'Undo 🔙' : 'Click to Mark as Complete ✅'}
               </button>
+              &nbsp;|&nbsp;
+              <button onClick={() => deleteItem(item.id)} type="submit">Delete ❌</button>
             </div>
           </div>
         ))}

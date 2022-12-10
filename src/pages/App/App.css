@@ -27,3 +27,15 @@
     margin: 5px;
     padding: 5px
 }
+
+.checkListBtnBox {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: grey;
+  border: solid black 2px;
+}
+
+.checkListBtnBox button {
+  margin: 1rem;
+  border: dotted black 2px;
+}

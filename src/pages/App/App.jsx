@@ -1,7 +1,8 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { checkLists } from "../../data";
-import Test from "../../component/CheckLists";
+import CheckList from "../../component/CheckLists";
 import Header from "../../Header";
+import HomePage from "../Home/HomePage";
 import BlankList from "../../component/BlankList";
 import "../../index.css";
 import './App.css';
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <div>
+      {/* <div>
         <button>
           <Link to="/">HOME</Link>
         </button>
@@ -31,9 +32,14 @@ export default function App() {
         <button>
           <Link to="/blank">Blank</Link>
         </button>
-      </div>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <button>
+          <Link to="/blank">LogIn</Link>
+        </button>
+      </div> */}
       <Routes>
-        <Route path="/:checkList" element={<Test checkListSteps={checkLists} />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/:checkList" element={<CheckList checkListSteps={checkLists} />} />
         <Route path="/blank" element={<BlankList />} />
       </Routes>
     </div>

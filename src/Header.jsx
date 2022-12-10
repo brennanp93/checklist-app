@@ -1,10 +1,34 @@
+import { Routes, Route, Link } from "react-router-dom";
 export default function Header() {
-    return (
-      <header>
-        <a href="" target="_blank">
-          This is the header!!!
-        </a>
-      </header>
-    );
-  }
-  
+  return (
+    <header>
+      <nav>
+        <div>
+          <button>
+            <Link to="/">HOME</Link>
+          </button>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <button>
+            <Link to="/Express">express</Link>
+          </button>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <button>
+            <Link to="/Django">django</Link>
+          </button>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <button>
+            <Link to="/React">react</Link>
+          </button>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <button>
+            <Link to="/blank">Blank</Link>
+          </button>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <button>
+            <Link to="/">LogIn</Link>
+          </button>
+        </div>
+      </nav>
+    </header>
+  );
+}

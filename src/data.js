@@ -5,7 +5,7 @@
 
 export const checkLists = [
     {
-        "name": "express",
+        "name": "Express",
         "description": "Some description you may or may not want to have above the steps",
         "anyOtherMetaData": "idk",
         "steps": [
@@ -61,7 +61,7 @@ export const checkLists = [
         ]
     },
     {
-        "name": "django",
+        "name": "Django",
         "description": "Some description you may or may not want to have above the steps",
         "anyOtherMetaData": "idk",
         "steps": [
@@ -96,7 +96,7 @@ export const checkLists = [
         ]
     },
     {
-        "name": "react",
+        "name": "React",
         "description": "Some description you may or may not want to have above the steps",
         "anyOtherMetaData": "idk",
         "steps": [
