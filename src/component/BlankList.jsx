@@ -3,7 +3,8 @@ import { useState } from "react";
 // import "./BlankList.css";
 // import BlankListForm from "./BlankListForm";
 
-export default function BlankList() {
+export default function BlankList({ newLists }) {
+  
   const [checkList, setCheckList] = useState([
     {
       step: "Buy Cheese",
@@ -12,7 +13,7 @@ export default function BlankList() {
       id: 1
     }
   ]);
-  console.log(checkList);
+
   const [newItem, setNewItem] = useState({
     step: "",
     website: "",
@@ -29,7 +30,6 @@ export default function BlankList() {
       website: "",
       completed: false,
       id: Math.floor(Math.random() * 100)
-
     })
   }
 

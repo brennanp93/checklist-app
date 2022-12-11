@@ -21,7 +21,7 @@ export default function Header() {
           </button>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <button>
-            <Link to="/blank">Blank</Link>
+            <Link to="/blanklist/groceries">Blank</Link>
           </button>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <button>

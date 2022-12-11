@@ -143,6 +143,68 @@ export const checkLists = [
                 "otherStepSpecificData": "You get the point"
             }
         ]
-    }
+    },
+    // {
+    //     "name": "groceries",
+    //     "description": "Grocery List Description",
+    //     "anyOtherMetaData": "idk",
+    //     "steps": [
+    //         {
+    //             "title": "Get Eggs",
+    //             "description": "Longer description of necessary work at this step",
+    //             "terminalCommand": "optional field with command to be copy/pasted",
+    //             "completed": false,
+    //             "otherStepSpecificData": "You get the point"
+    //         },]
+    // }
 
+]
+
+
+
+// export const newLists = [{
+//     step: "Buy Cheese",
+//     website: "https://cheese.com/",
+//     completed: false,
+//     id: 1
+//   }, 
+//   {
+//     step: "Buy Milk",
+//     website: "https://cheese.com/",
+//     completed: false,
+//     id: Math.floor(Math.random() * 100)
+//   },
+//   {
+//     step: "Buy Milk",
+//     website: "https://cheese.com/",
+//     completed: false,
+//     id: Math.floor(Math.random() * 100)
+//   }
+
+// ]
+
+
+export const newLists = [{
+    "name": "groceries",
+    "description": "Grocery List Description",
+    "anyOtherMetaData": "idk",
+    "steps": [
+        {
+            "title": "Get Eggs",
+            "description": "Purchase eggs at the store",
+            "terminalCommand": "optional field with command to be copy/pasted",
+            "completed": false,
+            "otherStepSpecificData": "You get the point",
+            "id": Math.floor(Math.random() * 100)
+        },
+        {
+            "title": "Get Milk",
+            "description": "Purchase milk at the store",
+            "terminalCommand": "optional field with command to be copy/pasted",
+            "completed": false,
+            "otherStepSpecificData": "You get the point",
+            "id": Math.floor(Math.random() * 100)
+        },
+    ]
+}
 ]

@@ -1,11 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
-import { checkLists } from "../../data";
+import { checkLists, newLists } from "../../data";
 import CheckList from "../../component/CheckLists";
 import Header from "../../Header";
 import HomePage from "../Home/HomePage";
-import BlankList from "../../component/BlankList";
+// import BlankList from "../../component/BlankList";
 import "../../index.css";
 import './App.css';
+import NewBlankList from "../../component/NewBlankList";
 
 
 export default function App() {
@@ -40,7 +41,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/:checkList" element={<CheckList checkListSteps={checkLists} />} />
-        <Route path="/blank" element={<BlankList />} />
+        {/* <Route path="/blank" element={<BlankList newLists={newLists} />} /> */}
+        <Route path="/blanklist/:newListSteps" element={<NewBlankList newLists={newLists} />} />
       </Routes>
     </div>
 
