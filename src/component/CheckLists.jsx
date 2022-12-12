@@ -36,6 +36,7 @@ export default function CheckList({ checkListSteps }) {
           <div style={{textDecoration: step.completed ? "line-Through" : ''}}>
             <h1 >{step.title}</h1>
             <p>{step.description}</p>
+            <p>{step.terminalCommand ? `Enter into Terminal: ${step.terminalCommand}` :''}</p>
             <p>{step.website}</p>
             <div>
               <button onClick={() => setBoolean(idx)} type="submit">

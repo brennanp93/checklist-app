@@ -1,125 +1,12 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-// import "./BlankList.css";
-// import BlankListForm from "./BlankListForm";
-
-// export default function NewBlankList({ newLists }) {
-//   const [checkList, setCheckList] = useState([
-//     {
-//       step: "Buy Cheese",
-//       website: "https://cheese.com/",
-//       completed: false,
-//       id: 1
-//     }
-//   ]);
-//   console.log(checkList);
-//   const [newItem, setNewItem] = useState({
-//     step: "",
-//     website: "",
-//     completed: false,
-//     id: Math.floor(Math.random() * 100)
-
-//   });
-
-// function handleSubmit(evt) {
-//   evt.preventDefault();
-//   setCheckList([...checkList, newItem]);
-//   setNewItem({
-//     step: "",
-//     website: "",
-//     completed: false,
-//     id: Math.floor(Math.random() * 100)
-
-//   })
-// }
-
-// function handleChange(evt) {
-//   const newItemList = {
-//     ...newItem,
-//     [evt.target.name]: evt.target.value,
-//     // [evt.target.name]: evt.target.value,
-//     completed: false
-//   };
-//   setNewItem(newItemList);
-//   // console.log("newItem" + newItemList);
-// }
-
-
-// function setBoolean(idx) {
-//   const updatedList = [...checkList];
-//   updatedList[idx].completed ? updatedList[idx].completed = false : updatedList[idx].completed = true;
-//   setCheckList(updatedList);
-// }
-
-// function deleteItem(id) {
-//   const removeItem = checkList.filter((item) => {
-//     return item.id !== id;
-//   });
-//   setCheckList(removeItem)
-//   console.log(removeItem)
-// }
-
-//   return (
-//     <>
-//       <div>
-//         <h1>Custom CheckList</h1>
-//         {checkList.map((item, idx) => (
-//           <div className="listStyle"
-//             style={{ textDecoration: item.completed ? "line-Through" : '' }}>
-//             <h1>{item.step}</h1>
-//             <div>
-//               <a href={item.website} target="_blank">
-//                 Additional Information
-//               </a>
-//             </div>
-//             <div>
-//               <button onClick={() => setBoolean(idx)} type="submit">
-//                 {item.completed ? 'Undo 🔙' : 'Click to Mark as Complete ✅'}
-//               </button>
-//               &nbsp;|&nbsp;
-//               <button onClick={() => deleteItem(item.id)} type="submit">Delete ❌</button>
-//             </div>
-//           </div>
-//         ))}
-//         <h2>Add an Item to your checklist</h2>
-//         <div className="blank-box">
-// <form onSubmit={handleSubmit}>
-//   <input
-//     autoComplete="off"
-//     name="step"
-//     value={newItem.step}
-//     onChange={handleChange}
-//     placeholder="New To-Do"
-//     required
-//     pattern=".{2,}"
-//   />
-//   <input
-//     autoComplete="off"
-//     name="website"
-//     value={newItem.website}
-//     onChange={handleChange}
-//     placeholder="Website"
-//     // required
-//     pattern=".{2,}"
-//   />
-
-//   <button type="submit">Add To Do</button>
-// </form>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
 
 export default function NewBlankList({ newLists }) {
   let { newListSteps } = useParams();
-  let oneStep = newLists.find((list) => list.name === newListSteps)
-  let listSteps = oneStep.steps
-
-  const [customList, setCustomList] = useState( listSteps )
-  console.log(customList)
-  // console.log(listSteps)
+  let oneStep = newLists.find((list) => list.name === newListSteps);
+  let listSteps = oneStep.steps;
+  const [customList, setCustomList] = useState(listSteps)
 
   const [newItem, setNewItem] = useState({
     title: "",
@@ -129,16 +16,6 @@ export default function NewBlankList({ newLists }) {
     otherStepSpecificData: null,
     id: Math.floor(Math.random() * 100)
   });
-  // console.log("newItem" + newItem);
-  // const [markComplete, setMarkComplete] = useState([
-  //   {
-  //     "title": "",
-  //     "description": "",
-  //     "terminalCommand": "",
-  //     "completed": "",
-  //     "otherStepSpecificData": ""
-  //   },
-  // ])
 
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -153,20 +30,13 @@ export default function NewBlankList({ newLists }) {
     })
   }
 
-
   function handleChange(evt) {
     const newItemList = {
       ...newItem,
       [evt.target.name]: evt.target.value,
-      // [evt.target.name]: evt.target.value,
-      // completed: false
     };
     setNewItem(newItemList);
-    // console.log(newItem.title + "BPP")
-    // console.log(evt.target.name)
-    // console.log(evt.target.value)
   }
-
 
   function setBoolean(idx) {
     const updatedList = [...oneStep.step];
@@ -187,7 +57,6 @@ export default function NewBlankList({ newLists }) {
     updatedList[idx].completed ? updatedList[idx].completed = false : updatedList[idx].completed = true;
     setNewItem(updatedList);
   }
-  // console.log(oneStep.steps)
 
   return (
     <>
@@ -197,7 +66,7 @@ export default function NewBlankList({ newLists }) {
           <div style={{ textDecoration: step.completed ? "line-Through" : '' }}>
             <h1 >{step.title}</h1>
             <p>{step.description}</p>
-            {/* <p>{step.website}</p> */}
+            <p>{step.terminalCommand ? `Enter into Terminal: ${step.terminalCommand}` : ''}</p>
             <div>
               <button onClick={() => setBoolean(idx)} type="submit">
                 {step.completed ? 'Undo 🔙' : 'Click to Mark as Complete ✅'}
@@ -228,7 +97,15 @@ export default function NewBlankList({ newLists }) {
             // required
             pattern=".{2,}"
           />
-
+          <input
+            autoComplete="off"
+            name="terminalCommand"
+            value={newItem.terminalCommand}
+            onChange={handleChange}
+            placeholder="Terminal Command"
+            // required
+            pattern=".{2,}"
+          />
           <button type="submit">Add To Do</button>
         </form>
       </div>

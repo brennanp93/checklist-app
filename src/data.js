@@ -12,14 +12,14 @@ export const checkLists = [
             {
                 "title": "Title of step 1 express",
                 "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
+                "terminalCommand": "npm i",
                 "completed": false,
                 "otherStepSpecificData": "You get the point"
             },
             {
                 "title": "Title of step 2 express",
                 "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
+                "terminalCommand": '',
                 "completed": false,
                 "otherStepSpecificData": "You get the point"
             },
@@ -192,7 +192,7 @@ export const newLists = [{
         {
             "title": "Get Eggs",
             "description": "Purchase eggs at the store",
-            "terminalCommand": "optional field with command to be copy/pasted",
+            "terminalCommand": null,
             "completed": false,
             "otherStepSpecificData": "You get the point",
             "id": Math.floor(Math.random() * 100)
@@ -200,7 +200,30 @@ export const newLists = [{
         {
             "title": "Get Milk",
             "description": "Purchase milk at the store",
-            "terminalCommand": "optional field with command to be copy/pasted",
+            "terminalCommand": null,
+            "completed": false,
+            "otherStepSpecificData": "You get the point",
+            "id": Math.floor(Math.random() * 100)
+        },
+    ]
+},
+{
+    "name": "bananas",
+    "description": "Grocery List Description",
+    "anyOtherMetaData": "idk",
+    "steps": [
+        {
+            "title": "Get Eggs",
+            "description": "Purchase eggs at the store",
+            "terminalCommand": null,
+            "completed": false,
+            "otherStepSpecificData": "You get the point",
+            "id": Math.floor(Math.random() * 100)
+        },
+        {
+            "title": "Get Milk",
+            "description": "Purchase milk at the store",
+            "terminalCommand": null,
             "completed": false,
             "otherStepSpecificData": "You get the point",
             "id": Math.floor(Math.random() * 100)
