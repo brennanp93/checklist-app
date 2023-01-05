@@ -1,233 +1,71 @@
 
 
 
+export const quizlist = [
+  {
+    image: 'https://i.imgur.com/yBfBLvC.jpg',
+    movie: 'The Shawshank Redemption',
+    hints: ['Released: 1994', 'Starring: Tim Robbins', 'Based on a Stephen King Novel'],
+    completed: false,
+  },
+  {
+    image: 'https://i.imgur.com/SaYl9eV.jpg',
+    movie: 'There Will Be Blood',
+    hints: ['Released: 2007', 'Directed By: Paul Thomas Anderson', 'Starring: Daniel Day-Lewis'],
+    completed: false,
+  },
+  {
+    image: 'https://i.imgur.com/SZUrcDc.jpg',
+    movie: 'Taxi Driver',
+    hints: ['Released: 1976','Directed By: Martin Scorsese', 'Starring: Robert De Niro'],
+    completed: false,
+  },
+  {
+    image: 'https://i.imgur.com/xYjifnJ.jpg',
+    movie: 'Shutter Island',
+    hints: ['Released: 2010', 'Directed By: Martin Scorsese', 'Starring: Leonardo DiCaprio'],
+    completed: false,
+  },
+  {
+    image: 'https://i.imgur.com/eJjz4lr.jpg',
+    movie: 'Django Unchained',
+    hints: ['Released: 2012', 'Directed By: Quentin Tarantino', 'Starring: Jamie Foxx'],
+    completed: false,
+  },
+  {
+    image: 'https://i.imgur.com/5In1vNH.jpg',
+    movie: 'The Godfather',
+    hints: ['Released: 1972', 'Based on a Novel by Mario Puzo', 'Directed by Francis Ford Coppola'],
+    completed: false,
+  },
+]
 
-
-export const checkLists = [
-    {
-        "name": "Express",
-        "description": "Some description you may or may not want to have above the steps",
-        "anyOtherMetaData": "idk",
-        "steps": [
-            {
-                "title": "Title of step 1 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "npm i",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Title of step 2 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": '',
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Title of step 3 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Title of step 4 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Title of step 5 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Title of step 6 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Title of step 6 express",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            }
-        ]
-    },
-    {
-        "name": "Django",
-        "description": "Some description you may or may not want to have above the steps",
-        "anyOtherMetaData": "idk",
-        "steps": [
-            {
-                "title": "Django step 1",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Django step 2",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Django step 3",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "Django step 4",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            }
-        ]
-    },
-    {
-        "name": "React",
-        "description": "Some description you may or may not want to have above the steps",
-        "anyOtherMetaData": "idk",
-        "steps": [
-            {
-                "title": "React Step 1",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "React Step 2",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "React Step 2",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "React Step 4",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "React Step 5",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            },
-            {
-                "title": "React Step 6",
-                "description": "Longer description of necessary work at this step",
-                "terminalCommand": "optional field with command to be copy/pasted",
-                "completed": false,
-                "otherStepSpecificData": "You get the point"
-            }
-        ]
-    },
-    // {
-    //     "name": "groceries",
-    //     "description": "Grocery List Description",
-    //     "anyOtherMetaData": "idk",
-    //     "steps": [
-    //         {
-    //             "title": "Get Eggs",
-    //             "description": "Longer description of necessary work at this step",
-    //             "terminalCommand": "optional field with command to be copy/pasted",
-    //             "completed": false,
-    //             "otherStepSpecificData": "You get the point"
-    //         },]
-    // }
+export const answerKey = [
+  { answer: 'There Will Be Blood' },
+  { answer: 'Taxi Driver' },
+  { answer: 'Shutter Island' },
+  { answer: 'Gone Girl' },
+  { answer: 'Full Metal Jacket' },
+  { answer: 'The Aviator' },
+  { answer: 'Django Unchained' },
+  { answer: 'The Girl With The Dragon Tattoo' },
+  { answer: 'The Northman' },
+  { answer: 'The Darjeeling Limited' },
+  { answer: 'No Country For Old Men' },
+  { answer: 'Midsommar' },
+  { answer: 'Parasite' },
+  { answer: 'The Shawshank Redemption' },
+  { answer: 'The Godfather' },
 
 ]
 
+export const otherQuizlist = []
 
-
-// export const newLists = [{
-//     step: "Buy Cheese",
-//     website: "https://cheese.com/",
-//     completed: false,
-//     id: 1
-//   }, 
-//   {
-//     step: "Buy Milk",
-//     website: "https://cheese.com/",
-//     completed: false,
-//     id: Math.floor(Math.random() * 100)
-//   },
-//   {
-//     step: "Buy Milk",
-//     website: "https://cheese.com/",
-//     completed: false,
-//     id: Math.floor(Math.random() * 100)
-//   }
-
+// answers: [
+//   { option1: 'Ghost Busters' },
+//   { option2: 'Star Wars' },
+//   { option3: "Ferris Bueller's Day Off" },
+//   { option4: 'Star Trek' },
 // ]
 
 
-export const newLists = [{
-    "name": "groceries",
-    "description": "Grocery List Description",
-    "anyOtherMetaData": "idk",
-    "steps": [
-        {
-            "title": "Get Eggs",
-            "description": "Purchase eggs at the store",
-            "terminalCommand": null,
-            "completed": false,
-            "otherStepSpecificData": "You get the point",
-            "id": Math.floor(Math.random() * 100)
-        },
-        {
-            "title": "Get Milk",
-            "description": "Purchase milk at the store",
-            "terminalCommand": null,
-            "completed": false,
-            "otherStepSpecificData": "You get the point",
-            "id": Math.floor(Math.random() * 100)
-        },
-    ]
-},
-{
-    "name": "bananas",
-    "description": "Grocery List Description",
-    "anyOtherMetaData": "idk",
-    "steps": [
-        {
-            "title": "Get Eggs",
-            "description": "Purchase eggs at the store",
-            "terminalCommand": null,
-            "completed": false,
-            "otherStepSpecificData": "You get the point",
-            "id": Math.floor(Math.random() * 100)
-        },
-        {
-            "title": "Get Milk",
-            "description": "Purchase milk at the store",
-            "terminalCommand": null,
-            "completed": false,
-            "otherStepSpecificData": "You get the point",
-            "id": Math.floor(Math.random() * 100)
-        },
-    ]
-}
-]

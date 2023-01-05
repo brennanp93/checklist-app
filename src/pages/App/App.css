@@ -40,3 +40,6 @@
   margin: 1rem;
   border: dotted black 2px;
 }
+.image{
+  max-width: 40%;
+}
